@@ -1,0 +1,34 @@
+{
+    "name": "anburocky3/phonepe-laravel",
+    "description": "PhonePe Payment Integration for Laravel projects",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Anburocky3\\PhonepeLaravel\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Anbuselvan Rocky",
+            "email": "15264938+anburocky3@users.noreply.github.com",
+            "homepage": "https://anburocky3.github.io",
+            "role": "Developer"
+        }
+    ],
+    "keywords": [
+        "phonepe", "payment-gateway", "indian"],
+    "homepage": "https://anburocky3.github.io/phonepe-laravel",
+    "minimum-stability": "dev",
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Barryvdh\\Debugbar\\ServiceProvider"
+            ],
+            "aliases": {
+                "Debugbar": "Barryvdh\\Debugbar\\Facade"
+            }
+        }
+    }
+}
