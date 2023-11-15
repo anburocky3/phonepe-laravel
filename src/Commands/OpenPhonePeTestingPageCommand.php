@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Console\Commands;
+namespace Anburocky3\PhonepeLaravel\Commands;
 
 use Illuminate\Console\Command;
 
@@ -12,6 +12,8 @@ class OpenPhonePeTestingPageCommand extends Command
 
     public function handle()
     {
+        $this->comment('All done');
 
+        return self::SUCCESS;
     }
 }

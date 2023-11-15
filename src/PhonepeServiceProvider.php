@@ -1,7 +1,8 @@
 <?php
 
-namespace Anburocky3\PhonepeLaravel\Providers;
+namespace Anburocky3\PhonepeLaravel;
 
+use Anburocky3\PhonepeLaravel\Commands\OpenPhonePeTestingPageCommand;
 use Illuminate\Foundation\Console\AboutCommand;
 use Illuminate\Support\ServiceProvider;
 
@@ -12,7 +13,7 @@ class PhonepeServiceProvider extends ServiceProvider
         AboutCommand::add('PhonePe Laravel', fn () => ['Version' => '0.1.0']);
 
         //
-        $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
+        $this->loadRoutesFrom(__DIR__.'/routes/web.php');
 
 
         $this->publishes([
@@ -23,6 +24,9 @@ class PhonepeServiceProvider extends ServiceProvider
 
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'phonepe');
 
+        $this->commands([
+            OpenPhonePeTestingPageCommand::class
+        ]);
     }
 
     public function register(): void

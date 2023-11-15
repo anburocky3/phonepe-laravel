@@ -17,17 +17,20 @@
         }
     ],
     "keywords": [
-        "phonepe", "payment-gateway", "indian"],
+        "phonepe", "payment-gateway", "anburocky3", "laravel"],
     "homepage": "https://anburocky3.github.io/phonepe-laravel",
     "minimum-stability": "dev",
-    "require": {},
+    "prefer-stable": true,
+    "require": {
+        "ext-curl": "*"
+    },
     "extra": {
         "laravel": {
             "providers": [
-                "Barryvdh\\Debugbar\\ServiceProvider"
+                "Anburocky3\\PhonepeLaravel\\PhonepeServiceProvider"
             ],
             "aliases": {
-                "Debugbar": "Barryvdh\\Debugbar\\Facade"
+                "PhonepeLaravel": "Anburocky3\\PhonepeLaravel\\Facades\\PhonepeLaravel"
             }
         }
     }
